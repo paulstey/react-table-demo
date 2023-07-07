@@ -1,11 +1,11 @@
 import React from "react";
 import "./App.css";
-import BasicTable from "./components/BasicTable.js";
+import FilteringTable from "./components/FilteringTable.js";
 
 function App() {
   return (
     <div className="App">
-      <BasicTable />
+      <FilteringTable />
     </div>
   );
 }
