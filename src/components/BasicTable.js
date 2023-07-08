@@ -2,7 +2,7 @@
 import React, { useMemo } from "react";
 import { useTable } from "react-table";
 import MOCK_DATA from "./mock_data.json";
-import { COLUMNS } from "./columns";
+import COLUMNS from "./columns";
 import "./table.css";
 
 function BasicTable() {

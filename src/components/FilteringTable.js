@@ -1,13 +1,19 @@
 /* eslint-disable react/jsx-key */
 import React, { useMemo } from "react";
 import { useTable, useSortBy, useFilters } from "react-table";
-import MOCK_DATA from "./mock_data.json";
-import { COLUMNS } from "./columns";
+import MOCK_DATA from "../data/mock_data.json";
+import COLUMNS from "./columns";
 import "./table.css";
+import ColumnFilter from "./ColumnFilter";
 
 function FilteringTable() {
   const columns = useMemo(() => COLUMNS, []);
   const data = useMemo(() => MOCK_DATA, []);
+  const defaultColumn = useMemo(() => {
+    return {
+      Filter: ColumnFilter,
+    };
+  }, []);
 
   const {
     getTableProps,
@@ -19,6 +25,7 @@ function FilteringTable() {
     {
       columns,
       data,
+      defaultColumn,
     },
     useFilters,
     useSortBy,
